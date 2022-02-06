@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- header pembuka -->
+    <header id="header">
+        <a href="#" class="logo">مَنْ جَدَّ وَجَدَ</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">destination</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+    <!-- header penutup -->
+
+    <!-- section pembuka -->
+    <section>
+        <h2 id="text"><span>Jalani hidup dengan menyebut nama</span><br>Allah</h2>
+        <img src="../assets/image/bird1.png" id="bird1">
+        <img src="../assets/image/bird2.png" id="bird2">
+        <img src="../assets/image/forest.png" id="forest">
+        <a href="" id="btn">explore</a>
+        <img src="../assets/image/rocks.png" id="rocks">
+        <img src="../assets/image/water.png" id="water">
+    </section>
+    <!-- section penutup -->
+    <div class="sec">
+        <h2>Dari air kita belajar tenang, dari batu kita belajar tegar.</h2>
+        <p>Biarkan jalan hidup kita mengalir seperti air, ikuti terus kemana arus membawamu. tetap tenangkan jiwa mu agar berguna untuk orang lain</p>
+    </div>
+
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+    </script>
+
+</body>
+
+</html>
